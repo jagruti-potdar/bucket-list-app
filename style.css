@@ -13,20 +13,50 @@ body{
     align-items:center;
 }
 
+
 .app{
     background: linear-gradient(135deg, #ffffff, #f5f7ff);
-    width:320px;
+    width:360px;  
     padding:25px;
     border-radius:18px;
     box-shadow:0 12px 35px rgba(0,0,0,0.25);
     border:1px solid rgba(0,0,0,0.05);
 }
 
+
+/* Card load animation */
+@keyframes popIn{
+    from{
+        opacity:0;
+        transform: scale(0.9);
+    }
+    to{
+        opacity:1;
+        transform: scale(1);
+    }
+}
+
+
 .app h2{
     text-align:center;
     margin-bottom:15px;
+    white-space: nowrap;   
+    font-size: 18px;       
 }
 
+
+@keyframes slideDown{
+    from{
+        opacity:0;
+        transform: translateY(-10px);
+    }
+    to{
+        opacity:1;
+        transform: translateY(0);
+    }
+}
+
+/* Input area */
 .input-box{
     display:flex;
     gap:8px;
@@ -38,12 +68,15 @@ body{
     border-radius:10px;
     border:1px solid #ccc;
     outline:none;
+    transition:0.3s;
 }
 
 .input-box input:focus{
     border-color:#667eea;
+    box-shadow:0 0 5px rgba(102,126,234,0.5);
 }
 
+/* Add Button */
 .input-box button{
     padding:10px 16px;
     border:none;
@@ -56,13 +89,16 @@ body{
 
 .input-box button:hover{
     background:#5a6fe0;
+    transform: scale(1.05);
 }
 
+/* List */
 ul{
     margin-top:15px;
     list-style:none;
 }
 
+/* Task item */
 li{
     background:#f2f2f2;
     padding:10px 12px;
@@ -72,22 +108,41 @@ li{
     align-items:center;
     margin-bottom:8px;
     transition:0.3s;
+    animation: fadeIn 0.3s ease;
 }
 
-/* Completed task look */
+/* New task animation */
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform: translateY(10px);
+    }
+    to{
+        opacity:1;
+        transform: translateY(0);
+    }
+}
+
+
+li:hover{
+    transform: scale(1.02);
+    background:#eaeaea;
+}
+
+
 li.completed{
     text-decoration:line-through;
     background:#e6f7ef;
     color:#2e7d32;
 }
 
-/* Action buttons container */
+
 .actions{
     display:flex;
     gap:6px;
 }
 
-/* Green tick button */
+
 .done-btn{
     background:#4CAF50;
     color:white;
@@ -100,10 +155,10 @@ li.completed{
 
 .done-btn:hover{
     background:#43a047;
-    transform:scale(1.05);
+    transform:scale(1.1);
 }
 
-/* Red delete button */
+
 .del-btn{
     background:#ff5252;
     color:white;
@@ -116,5 +171,5 @@ li.completed{
 
 .del-btn:hover{
     background:#e53935;
-    transform:scale(1.05);
+    transform:scale(1.1);
 }
