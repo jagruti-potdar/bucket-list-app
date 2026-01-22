@@ -1,0 +1,120 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background: linear-gradient(135deg,#667eea,#764ba2);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.app{
+    background: linear-gradient(135deg, #ffffff, #f5f7ff);
+    width:320px;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 12px 35px rgba(0,0,0,0.25);
+    border:1px solid rgba(0,0,0,0.05);
+}
+
+.app h2{
+    text-align:center;
+    margin-bottom:15px;
+}
+
+.input-box{
+    display:flex;
+    gap:8px;
+}
+
+.input-box input{
+    flex:1;
+    padding:10px;
+    border-radius:10px;
+    border:1px solid #ccc;
+    outline:none;
+}
+
+.input-box input:focus{
+    border-color:#667eea;
+}
+
+.input-box button{
+    padding:10px 16px;
+    border:none;
+    border-radius:10px;
+    background:#667eea;
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.input-box button:hover{
+    background:#5a6fe0;
+}
+
+ul{
+    margin-top:15px;
+    list-style:none;
+}
+
+li{
+    background:#f2f2f2;
+    padding:10px 12px;
+    border-radius:10px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:8px;
+    transition:0.3s;
+}
+
+/* Completed task look */
+li.completed{
+    text-decoration:line-through;
+    background:#e6f7ef;
+    color:#2e7d32;
+}
+
+/* Action buttons container */
+.actions{
+    display:flex;
+    gap:6px;
+}
+
+/* Green tick button */
+.done-btn{
+    background:#4CAF50;
+    color:white;
+    border:none;
+    border-radius:6px;
+    padding:4px 8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.done-btn:hover{
+    background:#43a047;
+    transform:scale(1.05);
+}
+
+/* Red delete button */
+.del-btn{
+    background:#ff5252;
+    color:white;
+    border:none;
+    border-radius:6px;
+    padding:4px 8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.del-btn:hover{
+    background:#e53935;
+    transform:scale(1.05);
+}
